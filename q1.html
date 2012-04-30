@@ -1,0 +1,96 @@
+<html>
+<head>
+<title>Scott Chung - IGN's Code-Foo Entry</title>
+<link href='http://fonts.googleapis.com/css?family=Ovo|Basic|Rosario|Oxygen' rel='stylesheet' type='text/css'>
+<link rel="stylesheet" type="text/css" href="style.css" />
+<script type="text/javascript" src="messageGen.js"></script>
+</head>
+
+<body>
+<div id = "header">
+	<h1 onclick="changeMessage()" id="message">Pick Me! Pick Me! Pick Me!</h1>
+	<h2>E-mail: scottc52@gmail.com &nbsp; Phone: 972-890-3719</h2>
+</div>	
+	
+
+
+<div id="container"> 
+	<div id = "navbar">
+		<ul>
+			<li><a href="home.html">Intro</a></li>
+			<li><a href="q1.html">Q1</a></li>
+			<li><a href="q2.html">Q2</a></li>
+			<li><a href="q3.html">Q3</a></li>
+		</ul>
+	</div>
+	
+	<div id="content">
+		<h3>Q1: How many ping pong balls would it take to fill an average-sized school bus?</h3>
+		<h4>Preface</h4>
+		<p>I will use the metric system, because honestly, the system makes sense. The answer to this question could vary widely depending on your assumptions. I will assume the following constants:<p>	
+<h5>Ping pong ball:</h5>
+	<p class = "indented">radius; r = 20mm = 0.02m</p>
+<h5>School bus interior:</h5>
+<p class ="indented"> 
+	width; w = 2.5m<br />
+	height; h = 3m<br />
+	length; l = 7.5m
+</p>
+<h5>Seats:</h5>
+<p>I will model seats as a rectangle the same size as the seats would be if you could fold them out to be flat.
+	number of seats; n = 21 (odd number, because the side with the doors has one less seat)</p>
+<p class = "indented">
+	width; w = 90cm = 0.9m<br />
+	height; h = 5cm = 0.05m<br />
+	length; l = 1m
+</p>
+<h4>Calculation</h4>
+<p>First, let's calculate the volume of the school bus.</p>
+<p class="indented">
+	volume of bus = width*height*length = 2.5m * 3m * 7.5m = 56.25 m^3<br />
+	volume of chairs = n*width*height*length = 21*0.9m*0.05m*1m = 0.945m^3
+</p>
+<p></p>	
+<p class="indented">
+	free volume = (volume of bus) - (volume of chairs) = 56.25m^3 - 0.945m^3 = 55.305m^3
+</p>
+<p>	
+Now assuming that the ping pong balls arrange themselves into a body centered cubic packing arrangement, we get a packing efficiency of about 70% (Yay for paying attention in chemistry!).
+</p>
+<p class="indented">
+	effective free volume = (free volume) * 70% = 38.7134m^3
+</p>
+<p>Next, we calculate the volume of a ping pong ball.</p>
+<p class="indented">
+	volume of ball = 4/3*pi*r^2 = 4/3*pi*(0.02m)^2 = 0.0016755m^3/ball
+</p>
+<p>Finally, divide the effective free volume by the volume of the ping pong ball to get your answer.</p>
+<p class="indented">
+	number of ping pong balls = (effective free volume) / (volume of ball) = (38.7134m^3) / (0.0016755m^3/ball) = 23105.359 balls.
+</p>
+<p>Rounding up, we get 23106 ping pong balls.</p>
+
+<h4>Cost Analysis</h4>
+<p>You can get a box of 240 practice ping pong balls for about $25. </p>
+<p>Finding a school bus rental service that¡¯ll let you fill their car with ping pong balls may be difficult. A quick search tells me that there are services that rent out school buses at as little as about $350 for 4 hours. However, finding one locally will be difficult. I¡¯m going to go off on a limb and say that it¡¯ll cost about $1000 to procure a school bus for our purpose.</p>
+<p class="indented">
+	(23106balls) * (1box/240balls) = 97 boxes<br />
+	$25/box * 97 boxes + $1000 = $3425
+</p>
+<p>So, in total, it¡¯ll cost about $3500 to fill up a school bus with ping pong balls.</p>
+
+<h4>Benefit Analysis</h4>
+<p>To be frank, I can¡¯t really see the benefit of filling a school bus with ping pong balls, especially considering the cost. The only situation that I can think of where this would be remotely useful is if you¡¯re trying to recover a school bus that has sunk into a lake by filling it with ping pong balls and making it float. In this case, you¡¯d also have to calculate how many ping pong balls to have enough buoyancy force to make the bus float.</p>
+
+<h4>Implementation Plan</h4>
+<p>The easiest approach to filling a school bus with ping pong balls would be to: </p>
+<p class="indented">
+1. Close all windows and doors, <br />
+2. Cut several holes on the top of the bus (several, to prevent the balls piling up in one portion of the bus and preventing you to put more balls in), and <br />
+3. Pump or dump ping pong balls through the holes until bus is full.
+</p>
+	</div>
+</div>
+
+</body>
+</html>

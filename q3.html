@@ -1,0 +1,44 @@
+<html>
+<head>
+<title>Scott Chung - IGN's Code-Foo Entry</title>
+<link href='http://fonts.googleapis.com/css?family=Ovo|Basic|Rosario|Oxygen' rel='stylesheet' type='text/css'>
+<link rel="stylesheet" type="text/css" href="style.css" />
+<script type="text/javascript" src="messageGen.js"></script>
+<script type="text/javascript" src="calculateLicensePlates.js"></script>
+</head>
+
+<body>
+<div id = "header">
+	<h1 onclick="changeMessage()" id="message">Pick Me! Pick Me! Pick Me!</h1>
+	<h2>E-mail: scottc52@gmail.com &nbsp; Phone: 972-890-3719</h2>
+</div>	
+	
+
+
+<div id="container"> 
+	<div id = "navbar">
+		<ul>
+			<li><a href="home.html">Intro</a></li>
+			<li><a href="q1.html">Q1</a></li>
+			<li><a href="q2.html">Q2</a></li>
+			<li><a href="q3.html">Q3</a></li>
+		</ul>
+	</div>
+	
+	<div id="content">
+		<h3>Q3: Write a program that takes a population and determines the simplest pattern that will produce enough unique plates.</h3>
+		<h4>Preface</h4>
+		<p>
+The question isn't very clear about how specifically we can define our patterns. <br /><br />
+I assumed that you can determine the number of letters and numbers in your license plate and arrange those numbers and letters in a specific order (The alternative is having the numbers and letters in any order as long as you have the correct number of letters and numbers, yielding a larger set.). This also makes manufacturing more efficient and cheaper, since you don't need to be able to print both letters and numbers on the same spot on the license plate.
+		</p>
+		<h4>Determine License Plate Pattern</h4>
+		<p>Enter the population and click "Calculate!" to figure out the license plate pattern you need.</p>
+		<input id='populationText' type='text' />
+		<input type='button' onclick='calculateLicensePlates()' value='Calculate!'>
+		<p id="licensePlateOutput" style="font-size:110%;"></p>
+	</div>
+</div>
+
+</body>
+</html>
