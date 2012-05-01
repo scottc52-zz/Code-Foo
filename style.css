@@ -51,7 +51,7 @@ a{
 	text-decoration:none;
 	margin: 4px 0px;
 	display:block;
-	width:3em;
+	min-width:3.5em;
 }
 
 a:hover {
