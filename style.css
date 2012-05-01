@@ -1,5 +1,11 @@
 /*body style*/
 body {
+	background-image: linear-gradient(bottom, rgb(255,255,255) 9%, rgb(132,189,189) 55%);
+	background-image: -o-linear-gradient(bottom, rgb(255,255,255) 9%, rgb(132,189,189) 55%);
+	background-image: -moz-linear-gradient(bottom, rgb(255,255,255) 9%, rgb(132,189,189) 55%);
+	background-image: -webkit-linear-gradient(bottom, rgb(255,255,255) 9%, rgb(132,189,189) 55%);
+	background-image: -ms-linear-gradient(bottom, rgb(255,255,255) 9%, rgb(132,189,189) 55%);
+
 	background-image: -webkit-gradient(
 		linear,
 		left bottom,
