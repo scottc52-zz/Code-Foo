@@ -8,29 +8,33 @@ function calculateLicensePlates(){
 		if(population==0){
 			out = "Population: 0<br />Pattern: 0 Numbers, 0 Letters<br />Total Plates: 0<br />Excess: 0";
 		}else{
-			var letters = 1;
-			var numPlates = 26;
-			while(population/numPlates>=1 && population != numPlates){
-				letters = letters + 1;
-				numPlates = numPlates*26;
+			var numbers = 1;
+			var numPlates = 10;
+			while(population>numPlates){
+				numbers = numbers + 1;
+				numPlates = numPlates*10;
 			}
-			var numbers = 0;
+			var letters = 0;
+			var numMax = numbers;
 			var tempNumPlates;
 			var tempLetters;
 			var tempNumbers;
-			while(true && letters > 0){
-				tempNumPlates = numPlates/26*10;
-				tempLetters = letters - 1;
-				tempNumbers = numbers + 1;
-				if(population <= tempNumPlates){
+			
+			for(tempNumbers = 0; tempNumbers<=numMax; tempNumbers = tempNumbers + 1){
+				tempNumPlates = Math.pow(10, tempNumbers);
+				tempLetters = 0;
+				
+				while(population>tempNumPlates){
+					tempLetters = tempLetters + 1;
+					tempNumPlates = tempNumPlates * 26;
+				}
+				if(tempNumPlates<numPlates){
 					numPlates = tempNumPlates;
 					letters = tempLetters;
 					numbers = tempNumbers;
-				}else{
-					break;
 				}
 			}
-			out = "Population: " + population + "<br />Pattern: " + numbers + "Numbers, " + letters +"Letters<br />Total Plates: "+ numPlates + "<br />Excess: " + (numPlates-population);
+			out = "Population: " + population + "<br />Pattern: " + numbers + " Numbers, " + letters +" Letters<br />Total Plates: "+ numPlates + "<br />Excess: " + (numPlates-population);
 		}
 	}
 	document.getElementById("licensePlateOutput").innerHTML=out;
