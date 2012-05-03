@@ -34,7 +34,7 @@ I assumed that you can determine the number of letters and numbers in your licen
 		</p>
 		<h4>Determine License Plate Pattern</h4>
 		<p>Enter the population and click "Calculate!" to figure out the license plate pattern you need.</p>
-		<input id='populationText' type='text' />
+		<input id='populationText' type='text' onKeydown="Javascript: if (event.keyCode==13) calculateLicensePlates();" >
 		<input type='button' onclick='calculateLicensePlates()' value='Calculate!'>
 		<p id="licensePlateOutput" style="font-size:110%;"></p>
 	</div>
